@@ -19,7 +19,6 @@
             color: #ffffff;
             border-bottom: 2px solid #60a5fa;
         }
-        /* Style Flowchart Node */
         .fc-node {
             transition: all 0.3s ease;
         }
@@ -50,7 +49,7 @@
             </div>
         </div>
 
-        <!-- Navigation Tabs (Persis antarmuka pada foto) -->
+        <!-- Navigation Tabs -->
         <nav class="max-w-7xl mx-auto mt-4 overflow-x-auto">
             <div class="flex space-x-1 border-b border-slate-800 text-xs font-medium min-w-max pb-1">
                 <button onclick="switchTab('beranda')" id="btn-beranda" class="tab-btn active px-4 py-2 rounded-t-lg flex items-center gap-2 hover:bg-slate-800 transition">
@@ -90,8 +89,8 @@
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                        <div class="text-blue-400 text-xl font-bold mb-1">01. Konsep dasar</div>
-                        <p class="text-xs text-slate-400">Memahami definisi algoritma, pseudocode, serta simbol-simbol standar flowchart.</p>
+                        <div class="text-blue-400 text-xl font-bold mb-1">01. Konsep dasar & Contoh</div>
+                        <p class="text-xs text-slate-400">Memahami algoritma, studi kasus hitung luas bangun datar, serta simbol-simbol flowchart.</p>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
                         <div class="text-green-400 text-xl font-bold mb-1">02. Lab Simulator</div>
@@ -105,45 +104,124 @@
             </div>
         </section>
 
-        <!-- TAB 2: EKSPLORASI MATERI -->
+        <!-- TAB 2: EKSPLORASI MATERI (DI-UPDATE DENGAN CONTOH LUAS PERSEGI / PERSEGI PANJANG) -->
         <section id="tab-materi" class="tab-content hidden space-y-6">
-            <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-6">
-                <h2 class="text-xl font-bold text-slate-100 mb-4"><i class="fa-solid fa-book text-blue-400 mr-2"></i>Materi Lengkap: Algoritma & Flowchart</h2>
+            <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-6 space-y-8">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-3 bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <h3 class="font-semibold text-blue-400 border-b border-slate-700 pb-2">1. Algoritma</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Algoritma adalah urutan langkah-langkah logis yang disusun secara sistematis untuk menyelesaikan suatu masalah. Syarat algoritma yang baik: Memiliki input, proses, output, bernilai pasti (definite), dan memiliki akhir (finite).
-                        </p>
-                    </div>
+                <!-- Sub-materi 1: Konsep Dasar Algoritma -->
+                <div>
+                    <h2 class="text-xl font-bold text-blue-400 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-book"></i> 1. Pengertian Algoritma & Ciri-cirinya
+                    </h2>
+                    <p class="text-xs text-slate-300 leading-relaxed bg-slate-900 p-4 rounded-lg border border-slate-800">
+                        <b>Algoritma</b> adalah urutan langkah-langkah logis dan sistematis yang digunakan untuk menyelesaikan masalah tertentu atau mencapai suatu tujuan. Syarat algoritma yang valid antara lain:
+                        <br><br>
+                        • <b>Definiteness (Kepastian):</b> Setiap langkah harus terdefinisi secara jelas dan tidak bermakna ganda.<br>
+                        • <b>Finite (Keterbatasan):</b> Memiliki titik awal (*start*) dan titik akhir (*end*).<br>
+                        • <b>Input & Output:</b> Memiliki data masukan awal yang diproses untuk menghasilkan luaran/hasil.
+                    </p>
+                </div>
 
-                    <div class="space-y-3 bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <h3 class="font-semibold text-blue-400 border-b border-slate-700 pb-2">2. Simbol Flowchart Standar</h3>
-                        <div class="space-y-2 text-xs">
-                            <div class="flex items-center gap-3">
-                                <span class="px-2 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded w-28 text-center font-mono">Oval</span>
-                                <span class="text-slate-400"><b>Terminator:</b> Titik awal (Start) / akhir (End).</span>
+                <!-- Sub-materi 2: Contoh Kasus Konkret (Luas Bangun Datar & Penentuan Jenis) -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold text-green-400 flex items-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> 2. Studi Contoh: Algoritma Hitung Luas & Deteksi Bangun Datar
+                    </h2>
+                    <p class="text-xs text-slate-300">
+                        Berikut adalah algoritma nyata untuk menghitung luas bangun segi empat serta menentukan apakah bangun tersebut dinamakan **Persegi** atau **Persegi Panjang** berdasarkan kondisi nilai panjang dan lebarnya:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Teks Bahasa Natural & Pseudocode -->
+                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 space-y-3">
+                            <h3 class="text-xs font-bold text-amber-400 uppercase tracking-wider">A. Deskripsi Algoritma & Pseudocode</h3>
+                            <div class="text-xs font-mono bg-slate-950 p-3 rounded text-slate-300 space-y-1.5 border border-slate-800">
+                                <p class="text-slate-500">// Pseudocode Percabangan Bangun Datar</p>
+                                <p><span class="text-purple-400">START</span></p>
+                                <p>&nbsp;&nbsp;<span class="text-blue-400">INPUT</span> panjang, lebar</p>
+                                <p>&nbsp;&nbsp;<span class="text-slate-400">Luas</span> = panjang * lebar</p>
+                                <p>&nbsp;&nbsp;<span class="text-amber-400">IF</span> (panjang == lebar) <span class="text-amber-400">THEN</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nama_bangun = <span class="text-green-300">"Persegi"</span></p>
+                                <p>&nbsp;&nbsp;<span class="text-amber-400">ELSE</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nama_bangun = <span class="text-green-300">"Persegi Panjang"</span></p>
+                                <p>&nbsp;&nbsp;<span class="text-amber-400">ENDIF</span></p>
+                                <p>&nbsp;&nbsp;<span class="text-blue-400">PRINT</span> nama_bangun, Luas</p>
+                                <p><span class="text-purple-400">END</span></p>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <span class="px-2 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/40 rounded w-28 text-center font-mono">Jajaran Genjang</span>
-                                <span class="text-slate-400"><b>Input/Output:</b> Menerima data atau menampilkan hasil.</span>
+                        </div>
+
+                        <!-- Diagram Flowchart Sederhana untuk Kasus Persegi -->
+                        <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col items-center justify-center space-y-2 text-xs">
+                            <h3 class="text-xs font-bold text-amber-400 uppercase tracking-wider w-full mb-2">B. Flowchart Hasil Konversi</h3>
+                            
+                            <div class="border border-amber-500 bg-amber-500/10 text-amber-300 px-4 py-1 rounded-full font-bold">[START] Mulai</div>
+                            <i class="fa-solid fa-arrow-down text-slate-600"></i>
+                            <div class="border border-blue-500 bg-blue-500/10 text-blue-300 px-4 py-1 rounded -skew-x-6 font-bold">Input (Panjang, Lebar)</div>
+                            <i class="fa-solid fa-arrow-down text-slate-600"></i>
+                            <div class="border border-slate-500 bg-slate-800 text-slate-200 px-4 py-1 rounded font-bold">Luas = Panjang × Lebar</div>
+                            <i class="fa-solid fa-arrow-down text-slate-600"></i>
+                            <div class="border border-purple-500 bg-purple-500/10 text-purple-300 px-3 py-1 rounded text-center border-dashed font-bold">Apakah Panjang == Lebar?</div>
+                            
+                            <div class="flex justify-between w-full px-4 my-1 text-[11px]">
+                                <div class="text-green-400 flex flex-col items-center">
+                                    <span>[YA]</span>
+                                    <div class="border border-green-500 bg-green-500/10 text-green-300 px-2 py-0.5 rounded mt-1">Nama = "Persegi"</div>
+                                </div>
+                                <div class="text-red-400 flex flex-col items-center">
+                                    <span>[TIDAK]</span>
+                                    <div class="border border-red-500 bg-red-500/10 text-red-300 px-2 py-0.5 rounded mt-1">Nama = "Persegi Panjang"</div>
+                                </div>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <span class="px-2 py-1 bg-slate-500/20 text-slate-300 border border-slate-500/40 rounded w-28 text-center font-mono">Persegi Panjang</span>
-                                <span class="text-slate-400"><b>Process:</b> Perhitungan atau pengolahan data.</span>
+
+                            <i class="fa-solid fa-arrow-down text-slate-600"></i>
+                            <div class="border border-blue-500 bg-blue-500/10 text-blue-300 px-4 py-1 rounded -skew-x-6 font-bold">Cetak (Nama, Luas)</div>
+                            <i class="fa-solid fa-arrow-down text-slate-600"></i>
+                            <div class="border border-amber-500 bg-amber-500/10 text-amber-300 px-4 py-1 rounded-full font-bold">[END] Selesai</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-materi 3: Simbol Standar Flowchart -->
+                <div>
+                    <h2 class="text-xl font-bold text-purple-400 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-shapes"></i> 3. Simbol Standar Flowchart
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-slate-900 p-3 rounded border border-slate-800 flex items-center gap-3">
+                            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full w-28 text-center font-mono font-bold">Oval</span>
+                            <div>
+                                <b class="text-slate-200">Terminator:</b>
+                                <p class="text-slate-400">Menandai awal (Start) atau akhir (End) dari suatu aliran proses.</p>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <span class="px-2 py-1 bg-green-500/20 text-green-300 border border-green-500/40 rounded w-28 text-center font-mono">Belah Ketupat</span>
-                                <span class="text-slate-400"><b>Decision:</b> Percabangan / Keputusan logika (Ya/Tidak).</span>
+                        </div>
+                        <div class="bg-slate-900 p-3 rounded border border-slate-800 flex items-center gap-3">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/40 rounded -skew-x-6 w-28 text-center font-mono font-bold">Jajaran Genjang</span>
+                            <div>
+                                <b class="text-slate-200">Input / Output:</b>
+                                <p class="text-slate-400">Digunakan untuk menerima masukan data atau menampilkan hasil cetakan.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 p-3 rounded border border-slate-800 flex items-center gap-3">
+                            <span class="px-3 py-1 bg-slate-500/20 text-slate-300 border border-slate-500/40 rounded w-28 text-center font-mono font-bold">Persegi Panjang</span>
+                            <div>
+                                <b class="text-slate-200">Process:</b>
+                                <p class="text-slate-400">Menyatakan operasi penghitungan aritmatika atau pengolahan data.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 p-3 rounded border border-slate-800 flex items-center gap-3">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/40 rounded w-28 text-center font-mono font-bold">Belah Ketupat</span>
+                            <div>
+                                <b class="text-slate-200">Decision (Keputusan):</b>
+                                <p class="text-slate-400">Percabangan kondisi logika (misal: membandingkan Ya / Tidak).</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- TAB 3: LAB SIMULATOR (Pusat Interaktif mirip foto) -->
+        <!-- TAB 3: LAB SIMULATOR -->
         <section id="tab-simulator" class="tab-content hidden space-y-6">
             <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-6">
                 <div class="flex items-center gap-2 mb-4">
@@ -172,7 +250,7 @@
                             </div>
                         </div>
 
-                        <!-- Mathematical Formula Output Style (Mirip Foto) -->
+                        <!-- Mathematical Formula Output Style -->
                         <div class="bg-slate-800/40 border border-slate-700/50 p-4 rounded-lg text-center">
                             <span class="text-xs text-slate-400 block mb-1">Status Keputusan Sistem:</span>
                             <div id="mathOutput" class="text-xl font-bold font-mono text-green-400">
@@ -271,45 +349,45 @@
 
                     <!-- Soal 2 -->
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-slate-200 mb-3">2. Langkah tertulis yang disusun secara berurutan dan logis untuk menyelesaikan masalah disebut...</p>
+                        <p class="text-xs font-semibold text-slate-200 mb-3">2. Jika nilai Panjang = 10 dan Lebar = 10, berdasarkan algoritma pembanding luas, nama bangun yang dicetak adalah...</p>
                         <div class="space-y-2 text-xs text-slate-300">
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="A" class="accent-blue-500"> A. Algoritma</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="B" class="accent-blue-500"> B. Hardware</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="C" class="accent-blue-500"> C. Topologi</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="D" class="accent-blue-500"> D. Database</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="A" class="accent-blue-500"> A. Persegi</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="B" class="accent-blue-500"> B. Persegi Panjang</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="C" class="accent-blue-500"> C. Segitiga</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="D" class="accent-blue-500"> D. Lingkaran</label>
                         </div>
                     </div>
 
                     <!-- Soal 3 -->
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-slate-200 mb-3">3. Manakah simbol yang tepat untuk menyatakan proses perhitungan matematika?</p>
+                        <p class="text-xs font-semibold text-slate-200 mb-3">3. Manakah simbol yang tepat untuk menyatakan proses perhitungan matematika (seperti Luas = Panjang × Lebar)?</p>
                         <div class="space-y-2 text-xs text-slate-300">
                             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="A" class="accent-blue-500"> A. Jajaran Genjang</label>
                             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="B" class="accent-blue-500"> B. Persegi Panjang</label>
                             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="C" class="accent-blue-500"> C. Lingkaran</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="D" class="accent-blue-500"> D. Segitiga</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="D" class="accent-blue-500"> D. Oval</label>
                         </div>
                     </div>
 
                     <!-- Soal 4 -->
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-slate-200 mb-3">4. Urutan simbol terminator pada flowchart yang benar adalah berada di...</p>
+                        <p class="text-xs font-semibold text-slate-200 mb-3">4. Urutan simbol terminator pada flowchart yang benar diletakkan pada...</p>
                         <div class="space-y-2 text-xs text-slate-300">
                             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="A" class="accent-blue-500"> A. Tengah flowchart saja</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="B" class="accent-blue-500"> B. Awal dan Akhir flowchart</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="B" class="accent-blue-500"> B. Awal (Start) dan Akhir (End) flowchart</label>
                             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="C" class="accent-blue-500"> C. Hanya di akhir</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="D" class="accent-blue-500"> D. Bebas di mana saja</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="D" class="accent-blue-500"> D. Di setiap percabangan</label>
                         </div>
                     </div>
 
                     <!-- Soal 5 -->
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-slate-200 mb-3">5. Apa luaran dari instruksi IF (80 >= 75) THEN "A" ELSE "B" ?</p>
+                        <p class="text-xs font-semibold text-slate-200 mb-3">5. Jika Panjang = 12 dan Lebar = 5, berapakah Luas dan Nama Bangun yang dihasilkan?</p>
                         <div class="space-y-2 text-xs text-slate-300">
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="A" class="accent-blue-500"> A. A</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="B" class="accent-blue-500"> B. B</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="C" class="accent-blue-500"> C. Error</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="D" class="accent-blue-500"> D. Non-active</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="A" class="accent-blue-500"> A. Luas = 60, Nama = Persegi Panjang</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="B" class="accent-blue-500"> B. Luas = 60, Nama = Persegi</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="C" class="accent-blue-500"> C. Luas = 17, Nama = Persegi Panjang</label>
+                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="D" class="accent-blue-500"> D. Luas = 17, Nama = Persegi</label>
                         </div>
                     </div>
 
@@ -330,7 +408,7 @@
                         <input type="text" id="refName" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500" placeholder="Ketik nama Anda...">
                     </div>
                     <div>
-                        <label class="block text-xs text-slate-300 mb-1">Apa hal terpenting yang Anda pelajari hari ini?</label>
+                        <label class="block text-xs text-slate-300 mb-1">Apa hal terpenting yang Anda pelajari hari ini mengenai Algoritma Percabangan?</label>
                         <textarea id="refText" rows="3" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500" placeholder="Tuliskan pendapat Anda..."></textarea>
                     </div>
                     <button onclick="saveReflection()" class="bg-pink-600 hover:bg-pink-500 text-white font-semibold text-xs px-5 py-2 rounded transition">
@@ -373,26 +451,20 @@
 
     <!-- Logic JavaScript -->
     <script>
-        // State global
         let currentQuizScore = null;
         let reflectionData = null;
 
-        // Switch Tab Functionality
         function switchTab(tabName) {
-            // Hide all tabs
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.add('hidden'));
 
-            // Remove active class from buttons
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
 
-            // Show current tab & activate button
             document.getElementById(`tab-${tabName}`).classList.remove('hidden');
             document.getElementById(`btn-${tabName}`).classList.add('active');
         }
 
-        // Simulator Logic
         function runSimulation() {
             const val = parseInt(document.getElementById('scoreSlider').value);
             document.getElementById('scoreDisplay').innerText = val;
@@ -400,9 +472,7 @@
             const mathOutput = document.getElementById('mathOutput');
             const nodeTrue = document.getElementById('node-true');
             const nodeFalse = document.getElementById('node-false');
-            const nodeDecision = document.getElementById('node-decision');
 
-            // Reset highlight
             nodeTrue.classList.remove('active-node');
             nodeFalse.classList.remove('active-node');
 
@@ -415,7 +485,6 @@
             }
         }
 
-        // Kuis Evaluasi Logic
         function submitQuiz() {
             const answers = { q1: 'B', q2: 'A', q3: 'B', q4: 'B', q5: 'A' };
             let score = 0;
@@ -423,7 +492,7 @@
             for(let i=1; i<=5; i++) {
                 const selected = document.querySelector(`input[name="q${i}"]:checked`);
                 if(selected && selected.value === answers[`q${i}`]) {
-                    score += 20; // 5 soal x 20 = 100
+                    score += 20;
                 }
             }
 
@@ -436,7 +505,6 @@
             updateRekapTable();
         }
 
-        // Save Reflection
         function saveReflection() {
             const name = document.getElementById('refName').value.trim();
             const text = document.getElementById('refText').value.trim();
@@ -451,7 +519,6 @@
             updateRekapTable();
         }
 
-        // Update Rekap Table
         function updateRekapTable() {
             const tbody = document.getElementById('rekapTableBody');
             const name = reflectionData ? reflectionData.name : "Siswa (Anonim)";
@@ -469,7 +536,6 @@
             `;
         }
 
-        // Run simulation initial execution
         runSimulation();
     </script>
 </body>
